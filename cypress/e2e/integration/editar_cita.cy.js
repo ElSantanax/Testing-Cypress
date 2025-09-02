@@ -26,4 +26,16 @@ describe('Llena los campos del formulario', () => {
         cy.get('[data-cy="submit-cita"]')
             .click();
     })
+
+    it('Edita la cita', () => {
+        cy.get('[data-cy="btn-editar"]')
+            .click();
+
+        cy.get('[data-cy="mascota-input"]')
+            .clear()
+            .type('Copito')
+
+        cy.get('[data-cy="submit-cita"]')
+            .click();
+    });
 })  
